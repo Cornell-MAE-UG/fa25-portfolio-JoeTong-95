@@ -1,14 +1,15 @@
 ---
 layout: default
-title: <Your Name> - Curriculum Vitae
+title: Ruofei Tong - Curriculum Vitae
 permalink: /cv/
 ---
 ## Curriculum Vitae
 
-[Download my CV]({{ "/assets/CV.pdf" | relative_url }}) in PDF format.
+[Download my CVi in English]({{ "/assets/CV_EN_v3.pdf" | relative_url }}) in PDF format.
+[Download my CV in Chinese]({{ "/assets/CV_CH_v4.pdf" | relative_url }}) in PDF format.
 
 
-**Email:** [netID@cornell.edu](mailto:netID@cornell.edu) | | | **Phone:** +123 456 7890
+**Email:** [netID@cornell.edu](mailto:rt455@cornell.edu) | | | **Phone:** +1 607 319 6335
 
 ---
 
@@ -20,7 +21,7 @@ Aspiring engineering student with a strong foundation in.... Passionate about ..
 #### Education
 - **Cornell University**  
   *Bachelor of Science in Mechanical and Aerospace Engineering*  
-  GPA: 3.8/4.0 | Graduation: Month, Year
+  GPA: 3.8/4.0 | Graduation: 123 Month, Year
 
 - **[High School Name]**  
   *High School Diploma*  
