@@ -28,9 +28,9 @@ With all results simulated for the target moment of $ 600in\cdot lb$ with an ste
 
 # CAD and Dimensions
 
-<img src="/assets/images/MAE3270 (2).png" width="550">
+<img src="/assets/images/MAE3270(2).png" width="550">
 
-<img src="/assets/images/MAE3270 (3).png" width="550">
+<img src="/assets/images/MAE3270(3).png" width="550">
 
 
 
@@ -67,20 +67,20 @@ $M$ is the material index,
 $\sigma_u$ is the maximum yield stress,
 $E$ is Young's modulus.  
 
-<img src="/assets/images/MAE3270 (4).png" width="550">
+<img src="/assets/images/MAE3270(4).png" width="550">
 
 This plot shows properties of Ti, Al, steel alloy via yield strength and Young’s module. Index line with slope of 1 shows the index $M$ for different materials. 
 
 With the same material index, we see clearly that both Titanium alloy and steel alloy can be equally preferable. However, considering steel alloys typically clusters around higher Young’s modulus, giving higher stiffness while typically being lower cost, choosing from steel alloy makes sense. Aluminum alloy is not stiff enough and doesn’t have as high a module as we desire, so it’s not desirable. 
 We select Maraging steel 300 and AISI 9225 as our primary targets for evaluation.  
 
-<img src="/assets/images/MAE3270 (5).png" width="550">
+<img src="/assets/images/MAE3270(5).png" width="550">
 
 
 Since we have a design point for fatigue, we would also prefer something that has higher fatigue strength. We clearly see that our selection of steel alloy is near the top of their family, confirming that the preliminary selection is likely valid. 
 
 
-<img src="/assets/images/MAE3270 (6).png" width="550">
+<img src="/assets/images/MAE3270(6).png" width="550">
 
 
 This plot shots candidate materials performance with base geometry using hand script appended below.
@@ -91,7 +91,7 @@ Titanium alloys are much more expensive and less strong in stress safety factor 
 Steel alloys are more desirable, since they have moderate signals, and good strength for their lower prices. From the selections, it’s obvious that Maraging 300 has the best overall safety factor performance and the signal strength is on part with other steel alloys. 
 Its detailed material properties are obtained from Granta. 
 
-<img src="/assets/images/MAE3270 (7).png" width="550">
+<img src="/assets/images/MAE3270(7).png" width="550">
 
 
 
@@ -114,7 +114,7 @@ Its detailed material properties are obtained from Granta.
 
 # Geometry iteration Process
 A python class that stores these geometries parameters was created and appended below. 
-<img src="/assets/images/MAE3270 (25).png" width="550">
+<img src="/assets/images/MAE3270(25).png" width="550">
 
 Using the class, I first changed how changing the second moment of area in the bending direction affects the design points. They are defined as: 
 
@@ -133,9 +133,9 @@ geom_a5 = Geometry(600.0, 16.0, 1.3, 0.4, 1.0)
 
 ```
 
-<img src="/assets/images/MAE3270 (23).png" width="550">
+<img src="/assets/images/MAE3270(23).png" width="550">
 
-<img src="/assets/images/MAE3270 (22).png" width="550">
+<img src="/assets/images/MAE3270(22).png" width="550">
 
 Since the force load in this tool is mostly directional, I increase the dimension of h so the second moment of aera. I reduced the value of b and changed h until I see a cross-over for 1mv/V target sensitivity. 
 
@@ -155,9 +155,9 @@ geom_b7 = Geometry(600.0, 16.0, 0.7, 0.7, 1.0)
 ```
 
 
-<img src="/assets/images/MAE3270 (1).png" width="550">
+<img src="/assets/images/MAE3270(1).png" width="550">
 
-<img src="/assets/images/MAE3270 (24).png" width="550">
+<img src="/assets/images/MAE3270(24).png" width="550">
 
 This is a much more linear relationship in safety factor. For an safety factor of ~16, we need to go with between b4-b5. This results in a sensitivity of around 0.6mv/v, and we need to optimize specific geometry to make it more than 1mV/V by changing the geometry at the gauge location. 
 Following the result, the final CAD model uses 0.7'' for $h$ and 0.45'' for $b$.
@@ -172,12 +172,12 @@ This gives us fatigue safety factor of 7, and fracture safety factor of 13, whic
 
 # Simulation Configurations 
 
-<img src="/assets/images/MAE3270 (8).png" width="550">
+<img src="/assets/images/MAE3270(8).png" width="550">
 
 A zero displacement boundary condition was placed on the 8 faces of the drive. This correctly simulates how the wrench is fixed when incerted in a screw cap. 
 
 
-<img src="/assets/images/MAE3270 (9).png" width="550">
+<img src="/assets/images/MAE3270(9).png" width="550">
 The force was placed at the very end of the wrench handle. This creates an overprediction of the responces, as a distributed force across a larger handle surface would result in less deformation. However, the moment it creates for the other end of the wrench is mostly the same. This choice is appropreate for an overpredicted, safe analysis. 
 
 
@@ -209,14 +209,14 @@ The force was placed at the very end of the wrench handle. This creates an overp
 
 # Analysis of Simulation Results
 
-<img src="/assets/images/MAE3270 (13).png" width="550">
-<img src="/assets/images/MAE3270 (14).png" width="550">
+<img src="/assets/images/MAE3270(13).png" width="550">
+<img src="/assets/images/MAE3270(14).png" width="550">
 
 The indicated maximum is principle stress is likely an artifact due to how the modle was imported as two separate bodies. The actual maximum sress likely occures in the two indicated prob region, showing around 44 to 46 ksi.
 
 
-<img src="/assets/images/MAE3270 (15).png" width="550">
-<img src="/assets/images/MAE3270 (16).png" width="550">
+<img src="/assets/images/MAE3270(15).png" width="550">
+<img src="/assets/images/MAE3270(16).png" width="550">
 
 The simulation result for maximum normal stress seemed reasonable in terms of the magnitude and the locations. Given the simulated maximum stresses (53525 psi), we find the safety factor is:
 
@@ -232,14 +232,14 @@ Which satisfies the requirement of $4.0$. Stresses everywhere else seems uniform
 
 
 
-<img src="/assets/images/MAE3270 (17).png" width="550">
+<img src="/assets/images/MAE3270(17).png" width="550">
 
 We observe the maximum load point displacement is 0.21 inches, which is moderate consider we actively chose an material that has high yield stress to Young’s modulus index. 
 
 
 
-<img src="/assets/images/MAE3270 (18).png" width="550">
-<img src="/assets/images/MAE3270 (12).png" width="550">
+<img src="/assets/images/MAE3270(18).png" width="550">
+<img src="/assets/images/MAE3270(12).png" width="550">
 
 This design results in an approximately 1352$\mu\epsilon$ deflection at the strain gauge location. 
 
@@ -281,7 +281,7 @@ Which passes the $1 \frac{mV}{V}$ design point.
 # Strain Guage selection and installation check
 I selected the modle BF120-3AA. its tehcnical documentation can be found here: <sup>[LINK](https://www.elecrow.com/download/Coding%20System%20of%20Strain%20Gauges-AGS-TECH%20Version.pdf?srsltid=AfmBOop0K1jrqhico4sunThEKNmjmEPvvwWc9BQia8rD8durZ6dHlYHB)</sup>
 
-<img src="/assets/images/MAE3270 (21).png" width="550">
+<img src="/assets/images/MAE3270(21).png" width="550">
 
 As shown above, there are plenty of space to mount these gauges in their correct orientation. 
 
