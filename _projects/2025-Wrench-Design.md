@@ -66,7 +66,7 @@ $$
 
 Where 
 $M$ is the material index,
-$\sigma_u$ is the maximum yield stress,
+$\sigma_u$ is the yield stress,
 $E$ is Young's modulus.  
 
 <img src="{{ site.baseurl }}/assets/images/MAE3270(4).png" width="550">
