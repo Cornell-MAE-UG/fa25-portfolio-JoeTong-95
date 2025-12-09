@@ -12,9 +12,9 @@ We were tasked with designing a 3D-printed static wind-turbine blade to maximize
 ### Design Process
 We decided we needed a global effective wind speed, rotation rate design point, and Reynolds number.
 
-<center>
-<img src="{{ site.baseurl }}/assets/images/Wind-Turbine-velocity.png">
-<center>
+
+<img src="{{ site.baseurl }}/assets/images/Wind-Turbine-velocity.png" width="550">
+
 
 We worked out an effective global velocity through several steps of integration over the velocity probability distribution.
 
