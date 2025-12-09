@@ -7,7 +7,7 @@ image: /assets/images/Wind-Turbine-COVER.png
 ---
 
 
-<img src="{{ site.baseurl }}/assets/images/Wind-Turbine-hero.png"  width="550">
+<img src="{{ site.baseurl }}/assets/images/Wind-Turbine-hero2.png"  width="550">
 
 
 
